@@ -1,10 +1,10 @@
-var Discord = require ("Discord.js");
+const Discord = require ("Discord.js");
 var bot = new Discord.Client();
 var msg = new Discord.Message()
 var prefix = ("/")
 var msgnb = 0
 //login
-bot.login("Mzk4NDY3MzUyMjU5MzMwMDQ4.DS-9vw.eNPKBRmjy2wQ2nDadBD7rgOy00k");
+bot.login();
 //Ready
 bot.on("ready", function()
   {
