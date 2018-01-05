@@ -1,1 +1,1 @@
-worker: npm i --save discord.js
+worker: node index.js
