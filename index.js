@@ -4,7 +4,7 @@ var msg = new Discord.Message()
 var prefix = ("/")
 var msgnb = 0
 //login
-bot.login("Mzk4NDY3MzUyMjU5MzMwMDQ4.DS-9vw.eNPKBRmjy2wQ2nDadBD7rgOy00k");
+bot.login(process.env.TOKEN);
 //Ready
 bot.on("ready", function()
   {
