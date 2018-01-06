@@ -4,16 +4,16 @@ var msg = new Discord.Message()
 var prefix = ("/")
 var fs= require("fs")
 var mode = ("0")
-//var msgnb = fs.readFileSync("msgnb", "UTF-8");
-//var msgnb_Embed = new Discord.RichEmbed()
-  //.setColor("#E5012E")
-  //.addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb)
+var msgnb = ("0")
+var msgnb_Embed = new Discord.RichEmbed()
+  .setColor("#E5012E")
+  .addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb)
 var help_Embed = new Discord.RichEmbed()
   .setColor("#E5012E")
   .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
   .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
 //login
-bot.login("Mzk4NDY3MzUyMjU5MzMwMDQ4.DS-9vw.eNPKBRmjy2wQ2nDadBD7rgOy00k");
+bot.login(pross.env.TOKEN);
 //Ready
 bot.on("ready", function()
   {
@@ -26,8 +26,7 @@ bot.on("ready", function()
     console.log("00    00  00 00")
     console.log("00    00  00   0")
     console.log("00000000  00    00")
-    console.log("Le bot est connecté \n----------------")
-    fs.writeFileSync(msgnb, "0", "UTF-8");  
+    console.log("Le bot est connecté \n----------------") 
 })
 //setgame
 bot.on("ready", function(){
@@ -68,10 +67,8 @@ bot.on("message", function(message) {
 //Nombre
 //de msg
 bot.on("message", function(message){
-  fs.writeFileSync("msgnb", "0", "UTF-8");
-  //msgnb = parseInt(msgnb) + 1
-    //fs.writeFileSync("msgnb", msgnb, "UTF-8");
-  //if(message.content === prefix + "msgnb"){
-   // message.channel.sendEmbed(msgnb_Embed)
-  //}
+  msgnb = parseInt(msgnb) + 1
+  if(message.content === prefix + "msgnb"){
+    message.channel.sendEmbed(msgnb_Embed)
+  }
 })
