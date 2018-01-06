@@ -68,7 +68,7 @@ bot.on("message", function(message) {
 //Nombre
 //de msg
 bot.on("message", function(message){
-  fs.writeFileSync(msgnb, "0", "UTF-8");
+  fs.writeFileSync("msgnb", "0", "UTF-8");
   //msgnb = parseInt(msgnb) + 1
     //fs.writeFileSync("msgnb", msgnb, "UTF-8");
   //if(message.content === prefix + "msgnb"){
