@@ -9,6 +9,29 @@ var help_Embed = new Discord.RichEmbed()
       .setColor("#E5012E")
       .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
       .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
+var shop_Embed = new Discord.RishEmbed()
+      .setColor("#E5012E")
+      .addField("Les Shop:", "Les Shop sont en Build on ne eput donc pour l'insant\nrien faire mais on peut voir l'interface:")
+      .addField("Des idee ??", "Contacter les Fondateur du serveur !")
+      .addField("Tu a + {readfile, membername 'UTF-8'} + coins     Pour avoir un Grade /grade et le nom du grade", "Grade 1 = + coinsgrd1\nGrade 2 = + coinsgrd2\nETC ...")
+      .addField("!! Si tu n'a pas gagner de jeux tu n'a pas d'argent donc tu ne peut pas acheter de grade !!")
+var msgnb_Embed = new Discord.RichEmbed()
+      .setColor("#E5012E")
+      .addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb")
+var jeux_Embed = new Discord.RichEmbed()
+      .setColor("#E5012E")
+      .addField("Voici le jeux il faut arriver a l'argent pour gagner 10 coins :money_with_wings: :money_with_wings: ", "   !! Jouer en Discord Plein écrant !!")
+      .addField("Comment jouer ???", "   Avec les touches W-A-S-D comme dans les jeux FPS")
+      .addField(":o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:", ":soccer: :white_small_square::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:")
+      .addField(":o::o::o::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o:")
+      .addField(":o::o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o:")
+      .addField(":o::o::o::o::o::o::o::o::o::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o::o:")
+      .addField(":o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::o::o::o::o::o::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o:")
+      .addField(":o::o::o::o::o::o::o::o::o::o::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::euro:", ":o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:")
+var perdu_Embed = new Discord.RichEmbed()
+      .setColor("#E5012E")
+      .addField("Tu a perdu !!", "Dommage :money_with_wings::money_with_wings::money_with_wings:")
+      .addField("Tu veut retenter ta chance ??", "Oui / Non")
 //login
 bot.login("Mzk4NDY3MzUyMjU5MzMwMDQ4.DS-9vw.eNPKBRmjy2wQ2nDadBD7rgOy00k");
 //Ready
@@ -59,28 +82,14 @@ bot.on("message", function(message) {
   }
   console.log(membername + "#" + discriminateur + ">" + message.content)
   if (message.content == prefix + "shop"){
-    var shop_Embed = discord.RishEmbed()
-      .setColor("#E5012E")
-      .addField("Les Shop:", "Les Shop sont en Build on ne eput donc pour l'insant\nrien faire mais on peut voir l'interface:")
-      .addField("Des idee ??", "Contacter les Fondateur du serveur !")
-      .addField("Tu a + {readfile, membername 'UTF-8'} + coins     Pour avoir un Grade /grade et le nom du grade", "Grade 1 = + coinsgrd1\nGrade 2 = + coinsgrd2\nETC ...")
-      .addField("!! Si tu n'a pas gagner de jeux tu n'a pas d'argent donc tu ne peut pas acheter de grade !!")
+    message.channel.sendEmbed(shop_Embed)
   }
 })
-
-
-
-
-
-
 //Nombre
 //de msg
 bot.on("message", function(message){
   msgnb = parseInt(msgnb) + 1
   if(message.content === prefix + "msgnb"){
-    var msgnb_Embed = discord.RichEmbed()
-      .setColor("#E5012E")
-      .addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb)
     message.channel.sendEmbed(msgnb_Embed)
   }
 })
@@ -89,16 +98,6 @@ bot.on("message", function(message){
 bot.on("message", function(message){
   if (message.content == prefix + "jeux"){
     mode = ("1")
-    var jeux_Embed = discord.RichEmbed()
-      .setColor("#E5012E")
-      .addField("Voici le jeux il faut arriver a l'argent pour gagner 10 coins :money_with_wings: :money_with_wings: ", "   !! Jouer en Discord Plein écrant !!")
-      .addField("Comment jouer ???", "   Avec les touches W-A-S-D comme dans les jeux FPS")
-      .addField(":o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:", ":soccer: :white_small_square::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:")
-      .addField(":o::o::o::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o:")
-      .addField(":o::o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o:")
-      .addField(":o::o::o::o::o::o::o::o::o::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o::o:")
-      .addField(":o::o::o::o::o::o::o::o::o::white_small_square::o::o::o::o::o::o::o::o::o::o:", ":o::o::o::o::o::o::o::o::o::white_small_square::white_small_square::o::o::o::o::o::o::o::o::o:")
-      .addField(":o::o::o::o::o::o::o::o::o::o::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::white_small_square::euro:", ":o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o::o:")
     message.channel.sendEmbed(jeux_Embed)
   }
   if(mode == "1"){
@@ -123,10 +122,6 @@ bot.on("message", function(message){
 //rp perdu m2
   if(mode == "w2"){
     mode = ("0")
-    var perdu_Embed = discord.RichEmbed()
-      .setColor("#E5012E")
-      .addField("Tu a perdu !!", "Dommage :money_with_wings::money_with_wings::money_with_wings:")
-      .addField("Tu veut retenter ta chance ??", "Oui / Non")
     message.channel.sendEmbed(perdu_Embed)
       if (message.content == "Oui"){
         message.channel.sendEmbed(jeux_Embed)
