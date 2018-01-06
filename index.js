@@ -4,7 +4,7 @@ var msg = new Discord.Message()
 var prefix = ("/")
 var fs= require("fs")
 var mode = ("0")
-var msgnb = ("0")
+var msgnb = 0
 var msgnb_Embed = new Discord.RichEmbed()
   .setColor("#E5012E")
   .addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb)
