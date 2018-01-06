@@ -73,5 +73,5 @@ bot.on("message", function(message){
     //fs.writeFileSync("msgnb", msgnb, "UTF-8");
   //if(message.content === prefix + "msgnb"){
    // message.channel.sendEmbed(msgnb_Embed)
-  }
+  //}
 })
