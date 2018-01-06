@@ -1,5 +1,5 @@
 var Discord = require ("discord.js");
-var bot = new Discord.Client();
+
 var msg = new Discord.Message()
 var prefix = ("/")
 var msgnb = 0
