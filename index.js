@@ -2,7 +2,7 @@ var Discord = require ("discord.js");
 var bot = new Discord.Client();
 var msg = new Discord.Message()
 var prefix = ("/")
-var msgnb = 0
+var fs= require("fs")
 var mode = ("0")
 var msgnb_Embed = new Discord.RichEmbed()
   .setColor("#E5012E")
@@ -26,7 +26,8 @@ bot.on("ready", function()
     console.log("00    00  00   0")
     console.log("00000000  00    00")
     console.log("Le bot est connecté \n----------------")
-  })
+    fs.writeFileSync("msgnb", "0", "UTF-8");  
+})
 //setgame
 bot.on("ready", function(){
   bot.user.setPresence({ game: { name: "/help", type: 0}})
