@@ -1,0 +1,15 @@
+{
+  "name": "dark",
+  "version": "0.1.0",
+  "description": "Mon bot Discord avec es jeux et un systeme de jeux",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lorenzo",
+  "license": "MIT"
+}
