@@ -4,6 +4,11 @@ var msg = new Discord.Message()
 var prefix = ("/")
 var msgnb = 0
 var mode = ("0")
+//Embed
+var help_Embed = new discord.RichEmbed()
+      .setColor("#E5012E")
+      .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
+      .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
 //login
 bot.login("Mzk4NDY3MzUyMjU5MzMwMDQ4.DS-9vw.eNPKBRmjy2wQ2nDadBD7rgOy00k");
 //Ready
@@ -50,10 +55,6 @@ bot.on("message", function(message) {
 //Le
 //Help
   if(message.content == prefix + "help"){
-    var help_Embed = discord.RichEmbed()
-      .setColor("#E5012E")
-      .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
-      .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
     message.channel.sendEmbed(help_Embed)
   }
   console.log(membername + "#" + discriminateur + ">" + message.content)
