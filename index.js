@@ -49,8 +49,9 @@ bot.on("message", function(message) {
       .catch(console.error);
     message.channel.sendMessage("Message supprimer Raison: Lien")
   }
-//Le
-//Help
+ })
+bot.on("message", function(message) {
+//help
   if(message.content == prefix + "help"){
     var help_Embed = new Discord.RichEmbed()
       .setColor("#E5012E")
@@ -58,7 +59,6 @@ bot.on("message", function(message) {
       .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
     message.channel.sendEmbed(help_Embed)
   }
-  console.log(membername + "#" + discriminateur + ">" + message.content)
 })
 
 
