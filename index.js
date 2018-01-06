@@ -69,6 +69,9 @@ bot.on("message", function(message) {
 bot.on("message", function(message){
   msgnb = parseInt(msgnb) + 1
   if(message.content === prefix + "msgnb"){
+    var msgnb_Embed = new Discord.RichEmbed()
+      .setColor("#E5012E")
+      .addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb)
     message.channel.sendEmbed(msgnb_Embed)
   }
 })
