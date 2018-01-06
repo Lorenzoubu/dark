@@ -52,7 +52,7 @@ bot.on("message", function(message) {
 //Le
 //Help
   if(message.content == prefix + "help"){
-    var help_Embed = new Discord.RichEmbed()
+    var help_Embed = new discord.RichEmbed()
       .setColor("#E5012E")
       .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
       .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
@@ -60,7 +60,7 @@ bot.on("message", function(message) {
   }
   console.log(membername + "#" + discriminateur + ">" + message.content)
   if (message.content == prefix + "shop"){
-    var shop_Embed = new Discord.RishEmbed()
+    var shop_Embed = new discord.RishEmbed()
       .setColor("#E5012E")
       .addField("Les Shop:", "Les Shop sont en Build on ne eput donc pour l'insant\nrien faire mais on peut voir l'interface:")
       .addField("Des idee ??", "Contacter les Fondateur du serveur !")
@@ -79,7 +79,7 @@ bot.on("message", function(message) {
 bot.on("message", function(message){
   msgnb = parseInt(msgnb) + 1
   if(message.content === prefix + "msgnb"){
-    var msgnb_Embed = new Discord.RichEmbed()
+    var msgnb_Embed = new discord.RichEmbed()
       .setColor("#E5012E")
       .addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb)
     message.channel.sendEmbed(msgnb_Embed)
@@ -90,7 +90,7 @@ bot.on("message", function(message){
 bot.on("message", function(message){
   if (message.content == prefix + "jeux"){
     mode = ("1")
-    var jeux_Embed = new Discord.RichEmbed()
+    var jeux_Embed = new discord.RichEmbed()
       .setColor("#E5012E")
       .addField("Voici le jeux il faut arriver a l'argent pour gagner 10 coins :money_with_wings: :money_with_wings: ", "   !! Jouer en Discord Plein écrant !!")
       .addField("Comment jouer ???", "   Avec les touches W-A-S-D comme dans les jeux FPS")
@@ -124,7 +124,7 @@ bot.on("message", function(message){
 //rp perdu m2
   if(mode == "w2"){
     mode = ("0")
-    var perdu_Embed = new Discord.RichEmbed()
+    var perdu_Embed = new discord.RichEmbed()
       .setColor("#E5012E")
       .addField("Tu a perdu !!", "Dommage :money_with_wings::money_with_wings::money_with_wings:")
       .addField("Tu veut retenter ta chance ??", "Oui / Non")
