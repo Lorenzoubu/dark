@@ -67,8 +67,8 @@ bot.on("message", function(message) {
 //Nombre
 //de msg
 bot.on("message", function(message){
-  msgnb = parseInt(msgnb) + 1
-  if(message.content === prefix + "msgnb"){
-    message.channel.sendEmbed(msgnb_Embed)
+  //msgnb = parseInt(msgnb) + 1
+  //if(message.content === prefix + "msgnb"){
+    //message.channel.sendEmbed(msgnb_Embed)
   }
 })
