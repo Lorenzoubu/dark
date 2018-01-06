@@ -37,16 +37,14 @@ bot.on("message", function(message) {
 //Lien
   if(message.content.startsWith('https://')){
     message.delete()
-      .then(msg => console.log("Deleted message from " + membername + "#" + discriminateur + ">" + message.content))
-      .catch(console.error);
+      .then(msg => console.log("Deleted message from " + membername + "#" + discriminateur))
     message.channel.sendMessage("Message supprimer Raison: Lien")
       }
 //anti
 //Lien
   if(message.content.startsWith('http')){
     message.delete()
-      .then(msg => console.log("Deleted message from " + membername + "#" + discriminateur + ">" + message.content))
-      .catch(console.error);
+      .then(msg => console.log("Deleted message from " + membername + "#" + discriminateur))
     message.channel.sendMessage("Message supprimer Raison: Lien")
   }
 //Le
