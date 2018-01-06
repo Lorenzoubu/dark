@@ -5,13 +5,10 @@ var prefix = ("/")
 var fs= require("fs")
 var mode = ("0")
 var msgnb = ("0")
-var msgnb_Embed = new Discord.RichEmbed()
-  .setColor("#E5012E")
-  .addField("Les Message du Bot:  ", "   Nombre Message Du serveur: " + msgnb)
 var help_Embed = new Discord.RichEmbed()
   .setColor("#E5012E")
   .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
-  .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
+  .addField("Interaction:", "   N/A")
 //login
 bot.login(process.env.TOKEN);
 //Ready
