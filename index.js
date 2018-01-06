@@ -5,7 +5,7 @@ var prefix = ("/")
 var msgnb = 0
 var mode = ("0")
 //Embed
-var help_Embed = new discord.RichEmbed()
+var help_Embed = new Discord.RichEmbed()
       .setColor("#E5012E")
       .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
       .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
