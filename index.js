@@ -13,7 +13,7 @@ var help_Embed = new Discord.RichEmbed()
   .addField("Les commande du Bot !", "   /help: Affiche le list des commande\n/msgnb: Affiche les Stats des message du serveur")
   .addField("Interaction:", "   /jeux: Pour jouer au jeux\n/shop: Bientot Disponible")
 //login
-bot.login(pross.env.TOKEN);
+bot.login(process.env.TOKEN);
 //Ready
 bot.on("ready", function()
   {
